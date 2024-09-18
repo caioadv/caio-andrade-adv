@@ -26,9 +26,6 @@ body {
 }
 
 .site-header-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
     position: sticky;
     top: 0;
     background: var(--color-bg-light);
@@ -39,24 +36,25 @@ body {
     font-style: normal;
 }
 
-.logo-wrapper {
-    display: flex;
-    justify-content: flex-start;
-}
-
-.logo-wrapper img{
-    width: 7rem;
-    height: 7rem;
-    object-fit: cover;
-}
-
 nav {
-    flex-grow: 1;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     height: 5rem;
     background: var(--color-bg-light);
+    padding: 0 2rem;
+    position: relative;
+}
+
+nav .logo-wrapper {
+    position: absolute;
+    left: 0;
+}
+
+.logo-wrapper img{
+    height: 5rem;
+    width: 21rem;
+    object-fit: cover;
 }
 
 nav ul{
@@ -64,6 +62,10 @@ nav ul{
     gap: 3rem;
     align-items: center;
     list-style: none;
+    margin: 0 auto;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 nav ul li{
@@ -85,6 +87,7 @@ a {
     text-decoration: none;
     color: var(--color-accent);
     transition: color 0.3s ease-in-out;
+    text-align: center;
 }
 
 p {
@@ -141,6 +144,11 @@ p {
     color: var(--color-text-light);
     font-family: 'Times New Roman', Times, serif;
     font-weight: 600;
+}
+
+.section-title.highlight {
+    color: var(--color-accent);
+    transition: color 0.5s ease-in-out;
 }
 
 .destaque-list {
